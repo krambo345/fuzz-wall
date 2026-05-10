@@ -1,5 +1,5 @@
 #!/bin/sh
-# fuzzel-wallpaper - A fuzzel-based wallpaper picker
+# fuzz-wall - A fuzzel-based wallpaper picker
 # Supports: swaybg, hyprpaper, feh, nitrogen, xwallpaper, swww
 
 WALLDIR="${FUZZEL_WALLPAPER_DIR:-$HOME/Pictures/wallpapers}"
