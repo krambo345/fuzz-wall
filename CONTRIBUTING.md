@@ -1,6 +1,6 @@
 # Contributing to fuzz-wall
 
-Thanks for taking the time to contribute!
+Thanks for taking the time to contribute!!
 
 ## Ways to contribute
 - Report bugs via [Issues](https://github.com/youngcoder45/fuzz-wall/issues)

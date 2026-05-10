@@ -10,7 +10,6 @@ It auto-detects your wallpaper setter, works on both Wayland and X11, and has ze
 --- 
 ## Demo (Watch on youtube)
 
-
 [Watch on YouTube](https://www.youtube.com/watch?v=WvxNMta54z4)
 ---
 
