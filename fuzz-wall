@@ -2,7 +2,21 @@
 # fuzz-wall - A fuzzel-based wallpaper picker
 # Supports: swaybg, hyprpaper, feh, nitrogen, xwallpaper, swww
 
-WALLDIR="${FUZZEL_WALLPAPER_DIR:-$HOME/Pictures/wallpapers}"
+# Find wallpaper directory
+find_walldir() {
+    for dir in \
+        "$HOME/Pictures/wallpapers" \
+        "$HOME/Pictures/Wallpapers" \
+        "$HOME/Pictures/wallpaper" \
+        "$HOME/Pictures/Wallpaper" \
+        "$HOME/Wallpapers" \
+        "$HOME/wallpapers"; do
+        [ -d "$dir" ] && echo "$dir" && return
+    done
+    echo ""
+}
+
+WALLDIR="${FUZZ_WALL_DIR:-$(find_walldir)}"
 
 # Detect wallpaper setter
 detect_setter() {
@@ -21,7 +35,6 @@ detect_setter() {
 set_wallpaper() {
     WALL="$1"
     SETTER="$2"
-
     case "$SETTER" in
         swaybg)
             pkill swaybg 2>/dev/null
@@ -38,16 +51,16 @@ set_wallpaper() {
         xwallpaper)
             xwallpaper --zoom "$WALL" ;;
         *)
-            notify-send "fuzzel-wallpaper" "No supported wallpaper setter found!" 2>/dev/null
+            notify-send "fuzz-wall" "No supported wallpaper setter found!" 2>/dev/null
             exit 1
             ;;
     esac
 }
 
 # Checks
-if [ ! -d "$WALLDIR" ]; then
-    notify-send "fuzzel-wallpaper" "Wallpaper directory not found: $WALLDIR" 2>/dev/null
-    echo "Error: Wallpaper directory not found: $WALLDIR" >&2
+if [ -z "$WALLDIR" ] || [ ! -d "$WALLDIR" ]; then
+    notify-send "fuzz-wall" "No wallpaper directory found! Set FUZZ_WALL_DIR or create ~/Pictures/wallpapers" 2>/dev/null
+    echo "Error: No wallpaper directory found. Set FUZZ_WALL_DIR env var or create ~/Pictures/wallpapers" >&2
     exit 1
 fi
 
