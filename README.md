@@ -10,7 +10,8 @@ It auto-detects your wallpaper setter, works on both Wayland and X11, and has ze
 --- 
 ## Demo (Watch on youtube)
 
-[![fuzz-wall demo](https://img.youtube.com/vi/WvxNMta54z4/maxresdefault.jpg)](https://www.youtube.com/watch?v=WvxNMta54z4)
+
+[Watch on YouTube](https://www.youtube.com/watch?v=WvxNMta54z4)
 ---
 
 ## Features
