@@ -29,8 +29,8 @@ It auto-detects your wallpaper setter, works on both Wayland and X11, and has ze
 |---|---|---|
 | mpvpaper | Wayland | Hyprland, Sway |
 | swaybg | Wayland | Sway |
-| awww | Wayland | Hyprland (with fade transitions) |
-| swww(retired) | Wayland | Hyprland (with fade transitions) |
+| awww | Wayland | Hyprland (with transitions) |
+| swww(retired) | Wayland | Hyprland (with transitions) |
 | hyprpaper | Wayland | Hyprland |
 | feh | X11 | i3, bspwm, dwm |
 | nitrogen | X11 | openbox, bspwm |
