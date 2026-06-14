@@ -21,7 +21,7 @@ WALLDIR="${FUZZ_WALL_DIR:-$(find_walldir)}"
 # Detect wallpaper setter
 detect_setter() {
     if [ -n "$WAYLAND_DISPLAY" ]; then
-        for cmd in swww swaybg hyprpaper xwallpaper; do
+        for cmd in mpvpaper swww swaybg hyprpaper xwallpaper; do
             command -v "$cmd" >/dev/null 2>&1 && echo "$cmd" && return
         done
     fi
@@ -36,6 +36,10 @@ set_wallpaper() {
     WALL="$1"
     SETTER="$2"
     case "$SETTER" in
+        mpvpaper)
+            pkill mpvpaper 2>/dev/null
+            mpvpaper '*' "$WALL" --loop &
+            ;;
         swaybg)
             pkill swaybg 2>/dev/null
             swaybg -i "$WALL" -m fill &
