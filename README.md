@@ -27,6 +27,7 @@ It auto-detects your wallpaper setter, works on both Wayland and X11, and has ze
 
 | Setter | Session | Used by |
 |---|---|---|
+| mpvpaper | Wayland | Hyprland, Sway |
 | swaybg | Wayland | Sway |
 | swww | Wayland | Hyprland (with fade transitions) |
 | hyprpaper | Wayland | Hyprland |
@@ -59,7 +60,7 @@ fuzz-wall picks whichever one is installed. If you have multiple, it prefers in 
 **Required:**
 - [`fuzzel`](https://codeberg.org/dnkl/fuzzel)
 
-**At least one wallpaper setter:**
+**At least one wallpaper setter/back-end:**
 - [`swaybg`](https://github.com/swaywm/swaybg)
 - [`swww`](https://github.com/LGFae/swww)
 - [`feh`](https://feh.finalrewind.org/)
@@ -68,6 +69,7 @@ fuzz-wall picks whichever one is installed. If you have multiple, it prefers in 
 
 **Optional:**
 - `libnotify` — for error notifications via `notify-send`
+- `waypaper` — for selecting the setter/back-end and more features
 
 ---
 
