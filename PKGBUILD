@@ -16,7 +16,7 @@ optdepends=(
     'libnotify: Desktop notifications support'
 )
 source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
-sha256sums=('1f58a92af091c3854332184002d8e14361f5b1dbc23201adcfed5cbf6177631d')
+sha256sums=('b021d649ce3a5902a0b6396f27131f6065f3fcdd1ff8b1e9d951a14908a78661')
 
 package() {
     cd "$srcdir/$pkgname-$pkgver"
